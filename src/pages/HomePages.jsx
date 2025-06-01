@@ -2,6 +2,7 @@ import React from "react";
 import HomeLayouts from "../layouts/HomeLayouts";
 import {HeroTop, HeroEnd } from "../components/molecules/Hero";
 import CardCourse from "../components/molecules/CardCourse";
+import { Link } from "react-router-dom";
 
 const HomePages = () => {
     return (
@@ -25,9 +26,9 @@ const HomePages = () => {
                 <section>
                     <nav className="relative space-y-3">
                         <div className="font-dmsans font-medium text-sm tracking-extra-tight space-x-9 overflow-hidden whitespace-nowrap md:text-base">
-                        <a className="text-[#F64920]" href="#">
+                        <Link to="/semua-produk" className="text-[#F64920]">
                             Semua Kelas
-                        </a>
+                        </Link>
                         <a className="text-[#333333]" href="#">
                             Pemasaran
                         </a>

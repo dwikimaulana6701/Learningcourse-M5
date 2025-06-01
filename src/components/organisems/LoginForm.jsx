@@ -1,6 +1,14 @@
 import React from 'react'
+import { useNavigate,Link } from 'react-router-dom'
 
 const LoginForm = () => {
+    const navigate = useNavigate()
+
+    const handleLoginClick = (e) => {
+        e.preventDefault()
+        navigate('/beranda')
+    }
+
     return (
         <form action="">
             <div className='flex flex-col gap-4'>
@@ -28,9 +36,9 @@ const LoginForm = () => {
                 </div>
             </div>
         
-            <button type="submit" className="bg-[#3ECF4C] hover:bg-green-600 cursor-pointer font-bold text-sm text-white rounded-x tracking-extra-tight py-[7px] px-[22px] mb-4 mt-6 w-full mx-auto flex justify-center lg:text-base">Masuk</button>
+            <button type="button" onClick={handleLoginClick} className="bg-[#3ECF4C] hover:bg-green-600 cursor-pointer font-bold text-sm text-white rounded-x tracking-extra-tight py-[7px] px-[22px] mb-4 mt-6 w-full mx-auto flex justify-center lg:text-base">Masuk</button>
             <div className="text-center cursor-pointer bg-grin hover:bg-green-100 rounded-x w-full mx-auto flex justify-center">
-                <a href="#" className="font-bold text-sm tracking-extra-tight py-[7px] px-[22px] text-[#3ECF4C] lg:text-base">Daftar</a>
+                <Link to="/register" className="font-bold text-sm tracking-extra-tight py-[7px] px-[22px] text-[#3ECF4C] lg:text-base">Daftar</Link>
             </div>
         </form>
     )
